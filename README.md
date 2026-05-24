@@ -123,17 +123,19 @@ POST /api/reservations/{id}/release
 
 Displays products, warehouse details, stock availability, and reserve functionality.
 
-![Product Page](screenshots/product-page.png)
+<img src="https://raw.githubusercontent.com/keerthana-k2509/allo-inventory/main/screenshots/product-page.png" width="900"/>
 
 ### Reservation Success Page
 
 Displayed after successful reservation creation.
 
-![Reservation Success](screenshots/reservation-success.png)
+<img src="https://raw.githubusercontent.com/keerthana-k2509/allo-inventory/main/screenshots/reservation-success.png" width="900"/>
 
 ### Products API Response
 
-![Products API](screenshots/products-api.png)
+Response from GET /api/products endpoint.
+
+<img src="https://raw.githubusercontent.com/keerthana-k2509/allo-inventory/main/screenshots/products-api.png" width="900"/>
 
 ---
 
