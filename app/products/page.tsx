@@ -10,7 +10,24 @@ export default function ProductsPage() {
     fetch("/api/products")
       .then((res) => res.json())
       .then((data) => {
-        setProducts(data);
+        const uniqueByName = Object.values(
+          data.reduce((acc: any, item: any) => {
+            if (
+              item.availableStock > 0 &&
+              (
+                !acc[item.name] ||
+                item.availableStock >
+                  acc[item.name].availableStock
+              )
+            ) {
+              acc[item.name] = item;
+            }
+
+            return acc;
+          }, {})
+        );
+
+        setProducts(uniqueByName as any[]);
         setLoading(false);
       })
       .catch((err) => {
@@ -41,39 +58,26 @@ export default function ProductsPage() {
       }
 
       window.location.href = "/reservation-success";
-
     } catch (error) {
       console.log(error);
       alert("Something went wrong");
     }
   }
 
-  if (loading) {
-    return (
-      <div
-        style={{
-          textAlign: "center",
-          padding: "50px",
-          fontSize: "24px"
-        }}
-      >
-        Loading...
-      </div>
-    );
-  }
+  if (loading) return <h2>Loading...</h2>;
 
   return (
     <div
       style={{
         padding: "40px",
         background: "#f4f4f4",
-        minHeight: "100vh"
+        minHeight: "100vh",
       }}
     >
       <h1
         style={{
           textAlign: "center",
-          marginBottom: "30px"
+          marginBottom: "30px",
         }}
       >
         Inventory Products
@@ -81,12 +85,12 @@ export default function ProductsPage() {
 
       {products.map((p) => (
         <div
-          key={p.productId}
+          key={p.name}
           style={{
             background: "white",
             padding: "20px",
-            borderRadius: "12px",
             marginBottom: "20px",
+            borderRadius: "12px",
             boxShadow: "0 4px 10px rgba(0,0,0,0.1)"
           }}
         >
@@ -94,7 +98,9 @@ export default function ProductsPage() {
 
           <p>📍 Warehouse: {p.warehouse}</p>
 
-          <p>📦 Available Stock: {p.availableStock}</p>
+          <p>
+            📦 Available Stock: {p.availableStock}
+          </p>
 
           <button
             onClick={() => reserveProduct(p)}
@@ -102,8 +108,7 @@ export default function ProductsPage() {
               padding: "10px 18px",
               borderRadius: "8px",
               border: "none",
-              cursor: "pointer",
-              fontSize: "15px"
+              cursor: "pointer"
             }}
           >
             Reserve Now
