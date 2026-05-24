@@ -1,6 +1,8 @@
 # ALLO Inventory Reservation System
 
-Inventory reservation system built using Next.js, Prisma, PostgreSQL, and Neon.
+Inventory reservation system built using Next.js, Prisma, PostgreSQL, and Neon Database.
+
+---
 
 ## Features
 
@@ -15,9 +17,9 @@ Inventory reservation system built using Next.js, Prisma, PostgreSQL, and Neon.
 ### Frontend
 - Product listing page
 - Warehouse and stock visibility
-- Reserve button
+- Reserve product functionality
 - Reservation success page
-- Frontend connected with backend APIs
+- Frontend integrated with backend APIs
 
 ---
 
@@ -25,7 +27,7 @@ Inventory reservation system built using Next.js, Prisma, PostgreSQL, and Neon.
 
 - Next.js
 - TypeScript
-- Prisma
+- Prisma ORM
 - PostgreSQL
 - Neon Database
 
@@ -33,7 +35,7 @@ Inventory reservation system built using Next.js, Prisma, PostgreSQL, and Neon.
 
 ## Setup Instructions
 
-Clone repository:
+Clone the repository:
 
 ```bash
 git clone https://github.com/keerthana-k2509/allo-inventory.git
@@ -51,13 +53,13 @@ Install dependencies:
 npm install
 ```
 
-Run development server:
+Run the development server:
 
 ```bash
 npm run dev
 ```
 
-Open frontend:
+Open the frontend application:
 
 ```bash
 http://localhost:3000/products
@@ -65,15 +67,15 @@ http://localhost:3000/products
 
 ---
 
-## Project Flow
+## Project Workflow
 
-1. User opens product page
+1. User opens Product Listing page
 2. Product inventory is fetched from backend API
-3. Products and warehouse stock are displayed
+3. Products and stock availability are displayed
 4. User clicks **Reserve Now**
-5. Reservation API is called
-6. Reservation gets created
-7. User is redirected to success page
+5. Reservation API is triggered
+6. Reservation is created successfully
+7. User is redirected to Reservation Success page
 
 ---
 
@@ -91,7 +93,7 @@ GET /api/products
 POST /api/reservations
 ```
 
-Request:
+Request Body:
 
 ```json
 {
@@ -119,19 +121,19 @@ POST /api/reservations/{id}/release
 
 ### Product Listing Page
 
-Displays products, warehouse details, stock availability and reserve action.
+Displays products, warehouse details, stock availability, and reserve functionality.
 
-![Product Page](./screenshots/product-page.png)
+![Product Page](screenshots/product-page.png)
 
 ### Reservation Success Page
 
-Shown after reservation is successfully created.
+Displayed after successful reservation creation.
 
-![Reservation Success](./screenshots/reservation-success.png)
+![Reservation Success](screenshots/reservation-success.png)
 
-### Products API
+### Products API Response
 
-![Products API](./screenshots/products-api.png)
+![Products API](screenshots/products-api.png)
 
 ---
 
