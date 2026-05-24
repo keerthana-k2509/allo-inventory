@@ -41,7 +41,7 @@ Clone the repository:
 git clone https://github.com/keerthana-k2509/allo-inventory.git
 ```
 
-Move into project folder:
+Move into the project folder:
 
 ```bash
 cd allo-inventory
@@ -121,7 +121,7 @@ POST /api/reservations/{id}/release
 
 ### Product Listing Page
 
-Inventory Products page showing available products, warehouse details, and reserve functionality.
+Inventory Products page showing available products, warehouse details and reserve functionality.
 
 ![Product Page](screenshots/product-page.png)
 
