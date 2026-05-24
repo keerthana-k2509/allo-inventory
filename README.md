@@ -19,6 +19,8 @@ Inventory reservation system built using Next.js, Prisma, PostgreSQL, and Neon.
 - Reservation success page
 - Frontend connected with backend APIs
 
+---
+
 ## Tech Stack
 
 - Next.js
@@ -26,6 +28,8 @@ Inventory reservation system built using Next.js, Prisma, PostgreSQL, and Neon.
 - Prisma
 - PostgreSQL
 - Neon Database
+
+---
 
 ## Setup Instructions
 
@@ -66,7 +70,7 @@ http://localhost:3000/products
 1. User opens product page
 2. Product inventory is fetched from backend API
 3. Products and warehouse stock are displayed
-4. User clicks "Reserve Now"
+4. User clicks **Reserve Now**
 5. Reservation API is called
 6. Reservation gets created
 7. User is redirected to success page
@@ -114,22 +118,20 @@ POST /api/reservations/{id}/release
 ## Screenshots
 
 ### Product Listing Page
-(Add screenshot)
+
+Displays products, warehouse details, stock availability and reserve action.
+
+![Product Page](./screenshots/product-page.png)
 
 ### Reservation Success Page
-(Add screenshot)
+
+Shown after reservation is successfully created.
+
+![Reservation Success](./screenshots/reservation-success.png)
 
 ### Products API
-![Products](./screenshots/products-api.png)
 
-### Reservation Created
-![Created](./screenshots/reservation-created.png)
-
-### Reservation Confirmed
-![Confirmed](./screenshots/reservation-confirmed.png)
-
-### Reservation Released
-![Released](./screenshots/reservation-released.png)
+![Products API](./screenshots/products-api.png)
 
 ---
 
@@ -138,3 +140,4 @@ POST /api/reservations/{id}/release
 - Built for ALLO campus placement take-home exercise
 - Inventory reservation logic prevents stock overbooking
 - Frontend and backend integrated successfully
+- End-to-end reservation workflow implemented
