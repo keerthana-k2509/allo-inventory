@@ -53,7 +53,7 @@ Install dependencies:
 npm install
 ```
 
-Run development server:
+Run the development server:
 
 ```bash
 npm run dev
@@ -121,21 +121,21 @@ POST /api/reservations/{id}/release
 
 ### Product Listing Page
 
-Inventory Products page showing available products, warehouse details and reserve functionality.
+Inventory Products page showing available products, warehouse details, and reserve functionality.
 
-<img src="https://raw.githubusercontent.com/keerthana-k2509/allo-inventory/main/screenshots/product-page.png" width="900"/>
+![Product Page](screenshots/product-page.png)
 
 ### Reservation Success Page
 
 Displayed after successful reservation creation.
 
-<img src="https://raw.githubusercontent.com/keerthana-k2509/allo-inventory/main/screenshots/reservation-success.png" width="900"/>
+![Reservation Success](screenshots/reservation-success.png)
 
 ### Products API Response
 
 Response from GET /api/products endpoint.
 
-<img src="https://raw.githubusercontent.com/keerthana-k2509/allo-inventory/main/screenshots/products-api.png" width="900"/>
+![Products API](screenshots/products-api.png)
 
 ---
 
